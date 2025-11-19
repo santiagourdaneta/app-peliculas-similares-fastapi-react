@@ -1,0 +1,154 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* Forzar al HTML a tomar el 100% exacto del ancho de la ventana */
+html {
+    width: 100%;
+    /* Ocultar cualquier contenido que se salga del borde derecho */
+    overflow-x: hidden; 
+} 
+
+/* Limitar el contenedor principal de la aplicación */
+#root, .App {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  /* Ocultar cualquier contenido que se salga del borde derecho */
+  overflow-x: hidden; 
+}
+
+h1 {
+  font-size: 2.0em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.recommendation-result p {
+    /* Esto obliga al texto largo a saltar a la siguiente línea */
+    word-wrap: break-word;
+    word-break: break-word; 
+    /* Asegura que el contenedor de texto no se extienda más allá de su padre */
+    max-width: 100%; 
+}
+
+/* Si el desbordamiento es por la tarjeta principal */
+.recommendation-result {
+    /* Maneja cualquier contenido interno que pueda salirse */
+    overflow-x: hidden; 
+    margin: 0 auto; /* Centra el resultado si es necesario */
+
+    /* Asegurar que la tarjeta nunca sea más ancha que su contenedor */
+    max-width: 100%; 
+    /* Al usar 'padding', asegurar de que el ancho lo incluya */
+    box-sizing: border-box; 
+}
+
+img {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    height: auto;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 10px;
+    margin-top: 40px; /* Espacio entre el contenido principal y el footer */
+    width: 100%; /* Ocupa el 100% del ancho */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las secciones salten de línea en pantallas pequeñas */
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box; /* Crucial para evitar scroll horizontal */
+}
+
+.footer-section {
+    flex: 1 1 300px; /* Flex-grow: 1, Flex-shrink: 1, Base width: 300px */
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.footer-section h4 {
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.footer-section a {
+    color: #00bcd4; /* Color de enlace para contraste */
+    text-decoration: none;
+}

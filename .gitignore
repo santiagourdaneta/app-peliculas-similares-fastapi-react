@@ -1,0 +1,21 @@
+# Python
+# Entorno virtual
+.venv
+venv/
+env/
+*.pyc
+
+# Caché de Python
+__pycache__/
+
+# Dependencias del sistema operativo y logs
+*.log
+.DS_Store
+
+# Node.js / Frontend (Si tu frontend está en una subcarpeta)
+/frontend/node_modules
+/frontend/dist
+
+# Variables de entorno
+.env
+.env.*
